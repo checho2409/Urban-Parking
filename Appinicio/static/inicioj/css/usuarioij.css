@@ -1,0 +1,184 @@
+/* ======== LAYOUT PRINCIPAL ======== */
+.usuario-layout {
+    display: flex;
+    min-height: 100vh;
+    padding: 20px; /* espacio general hacia fuera */
+    gap: 0;        /* sin separación entre sidebar y main */
+}
+
+/* ======== SIDEBAR ======== */
+.usuario-sidebar {
+    width: 250px;
+    background: linear-gradient(180deg, #1b5e20, #2e7d32, #43a047);
+    padding: 30px 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 20px;
+    height: calc(100vh - 40px); /* ajustado al padding del layout */
+    border-radius: 16px 0 0 16px; /* redondeado solo lado izquierdo */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+}
+
+.sidebar-titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 35px;
+    text-align: center;
+    color: #fff;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.sidebar-menu li {
+    margin: 0;
+}
+
+.sidebar-menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 12px 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.sidebar-menu a:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: translateX(5px);
+}
+
+/* Botón salir */
+.btn-salir {
+    margin-top: auto;
+    padding: 14px;
+    background: #e53935;
+    text-align: center;
+    border-radius: 12px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-salir:hover {
+    background: #c62828;
+    transform: scale(1.05);
+}
+
+/* ======== MAIN ======== */
+.usuario-main {
+    flex: 1;
+    padding: 40px;
+    color: #fff;
+    background: rgba(0,0,0,0.25);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: 0 16px 16px 0; /* redondeado lado derecho */
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+}
+
+/* ======== BIENVENIDA ======== */
+.bienvenida-box {
+    margin-bottom: 40px;
+}
+
+.bienvenida-box h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.resaltar {
+    color: #ffd54f;
+}
+
+.subtexto {
+    font-size: 1rem;
+    color: #f1f1f1;
+}
+
+/* ======== TARJETAS ======== */
+.usuario-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.usuario-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+.usuario-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.16);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.45);
+}
+
+.icono {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+}
+
+.usuario-card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.usuario-card p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+/* ======== BOTONES OPCION ======== */
+.btn-opcion {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #f49110e3;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.btn-opcion:hover {
+    background: linear-gradient(135deg, #8e24aa, #6a1b9a);
+    transform: scale(1.05);
+}
+
+/* ======== GRAFICO BOX ======== */
+.grafico-box {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+    margin-top: 20px;
+}
+

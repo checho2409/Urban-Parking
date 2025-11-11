@@ -1,0 +1,48 @@
+{% extends "soft/base222.html" %}
+{% block contenido %}
+<div class="ingresos-container">
+    <h2 class="ingresos-title">Lista de Ingresos de Vehículos</h2>
+
+    <a href="{% url 'registrar_ingreso' %}" class="ingresos-link">➕ Registrar Ingreso</a>
+
+    <table class="ingresos-table">
+        <thead>
+            <tr>
+                <th>Usuario</th>
+                <th>Placa</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Entrada</th>
+                <th>Salida</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ingreso in ingresos %}
+            <tr>
+                <td>{{ ingreso.usuario }}</td>
+                <td>{{ ingreso.vehiculo.placa }}</td>
+                <td>{{ ingreso.vehiculo.marca }}</td>
+                <td>{{ ingreso.vehiculo.modelo }}</td>
+                <td>{{ ingreso.fecha_ingreso }}</td>
+                <td>
+                    {% if ingreso.fecha_salida %}
+                        {{ ingreso.fecha_salida }} <span class="estado fuera">Fuera</span>
+                    {% else %}
+                        <span class="estado dentro">Dentro</span>
+                    {% endif %}
+                </td>
+                <td>
+                    {% if not ingreso.fecha_salida %}
+                        <form method="post" action="{% url 'registrar_salida' ingreso.id %}" style="display:inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn-salida">Registrar Salida</button>
+                        </form>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

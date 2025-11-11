@@ -1,0 +1,52 @@
+{% extends "soft/base222.html" %}
+
+{% block titulo %}Panel de Usuario{% endblock %}
+
+{% block contenido %}
+
+<div class="usuario-layout">
+
+    <!-- Contenido principal -->
+    <main class="usuario-main">
+        <div class="bienvenida-box">
+            <h1>Buenas Tardes, <span class="resaltar">Usuario1</span> 👋</h1>
+            <p class="subtexto">Nos alegra verte de nuevo en tu panel. Explora tus opciones desde el menú lateral.</p>
+        </div>
+
+        <div class="usuario-grid">
+
+            <!-- Perfil -->
+            <div class="usuario-card">
+                <div class="icono">👤</div>
+                <h2>Mi Perfil</h2>
+                <p>Consulta y edita tu información personal.</p>
+                <a href="{% url 'usuario_perfil' %}" class="btn-opcion">Ver perfil</a>
+            </div>
+
+            <!-- Historial -->
+            <div class="usuario-card">
+                <div class="icono">📜</div>
+                <h2>Mi Historial</h2>
+                <p>Revisa tus actividades y registros anteriores.</p>
+                <a href="{% url 'usuario_historial' %}" class="btn-opcion">Ver historial</a>
+            </div>
+
+            <!-- Notificaciones -->
+            <div class="usuario-card">
+                <div class="icono">🔔</div>
+                <h2>Notificaciones</h2>
+                <p>Mantente al día con tus novedades.</p>
+                <a href="{% url 'usuario_notificaciones' %}" class="btn-opcion">Ver notificaciones</a>
+            </div>
+
+            <!-- Soporte -->
+            <div class="usuario-card">
+                <div class="icono">💬</div>
+                <h2>Soporte</h2>
+                <p>¿Tienes dudas? Contáctanos y te ayudamos.</p>
+                <a href="{% url 'usuario_soporte' %}" class="btn-opcion">Contactar soporte</a>
+            </div>
+        </div>
+    </main>
+</div>
+{% endblock %}

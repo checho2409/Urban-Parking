@@ -1,0 +1,124 @@
+/* Contenedor principal */
+.reg-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+    color: white;
+}
+
+/* Títulos */
+.reg-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.reg-subtitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 20px 0 10px;
+    color: #f0f0f0;
+}
+
+/* Grids para inputs */
+.reg-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+/* Inputs */
+.reg-grid input,
+.reg-grid select,
+.reg-grid textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.15);
+    color: white;
+}
+
+.reg-grid input::placeholder,
+.reg-grid textarea::placeholder {
+    color: #ddd;
+}
+
+option {
+    color: black;
+}
+
+/* Botones */
+.reg-btn {
+    background: #f49110e3; /* Color pedido */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.reg-btn:hover {
+    background: #c96e0b; /* un tono más oscuro */
+}
+
+/* Centrado de botón */
+.reg-center {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Buscador */
+.reg-search {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.reg-search input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+/* Tabla */
+.reg-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.reg-table th,
+.reg-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.reg-table th {
+    background: #f49110e3;
+    color: white;
+}
+
+.reg-table tr:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* Mensaje vacío */
+.reg-empty {
+    text-align: center;
+    padding: 15px;
+    color: #ddd;
+}

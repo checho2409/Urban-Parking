@@ -1,0 +1,23 @@
+{% extends "soft/base222.html" %}
+
+{% block contenido %}
+<div class="user-header">
+    <h1>🔔 Notificaciones</h1>
+    <p>Revisa tus últimas alertas y mensajes importantes.</p>
+</div>
+
+<div class="user-notifications">
+    {% if notificaciones %}
+        <ul>
+            {% for n in notificaciones %}
+            <li class="notification {% if not n.leida %}no-leida{% endif %}">
+                <span class="notif-fecha">{{ n.fecha }}</span>
+                <p class="notif-texto">{{ n.mensaje }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No tienes notificaciones por ahora ✅</p>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+    {% extends "soft/base222.html" %}
+    {% block contenido %}
+    <div class="user-layout">
+    <main class="user-main">
+        <div class="user-header">
+        <h1>🚗 Mis Vehículos</h1>
+        <p>Consulta y administra los vehículos registrados.</p>
+        </div>
+
+        <table class="user-table">
+        <thead>
+            <tr><th>ID</th><th>Placa</th><th>Modelo</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>ABC123</td><td>Mazda 3</td></tr>
+            <tr><td>2</td><td>XYZ987</td><td>Renault Duster</td></tr>
+        </tbody>
+        </table>
+    </main>
+    </div>
+    {% endblock %}

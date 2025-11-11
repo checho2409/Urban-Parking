@@ -1,0 +1,103 @@
+/* Hero con imagen */
+.nosotros-hero {
+    background: url("https://images.unsplash.com/photo-1502877338535-766e1452684a") center/cover no-repeat;
+    height: 300px;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.nosotros-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.nosotros-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.nosotros-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Contenedor */
+.nosotros-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 20px;
+    align-items: start;
+    grid-auto-flow: row dense; /* evita huecos */
+}
+
+/* Tarjetas */
+.nosotros-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, background 0.3s ease;
+    color: black;
+}
+
+.nosotros-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.nosotros-card-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #6a1b9a;
+    font-weight: bold;
+}
+
+.nosotros-text {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Full width: ocupa toda la fila */
+.full-width {
+    grid-column: 1 / -1; 
+}
+
+/* Valores */
+.nosotros-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nosotros-text li {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+/* Redes sociales */
+.nosotros-social {
+    margin-top: 10px;
+}
+
+.nosotros-social a {
+    color: #6a1b9a;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.nosotros-social a:hover {
+    color: #fff;
+}

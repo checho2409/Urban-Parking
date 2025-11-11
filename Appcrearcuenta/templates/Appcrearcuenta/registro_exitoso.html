@@ -1,0 +1,12 @@
+    {% extends "ingresos/base2.html" %}
+    {% load static %}
+
+    {% block titulo %}Registro Exitoso{% endblock %}
+
+    {% block contenido %}
+    <div class="container" style="text-align:center; padding:30px;">
+    <h1>🎉 ¡Registro Exitoso!</h1>
+    <p>Tu cuenta ha sido creada correctamente. Ahora puedes iniciar sesión.</p>
+    <a href="{% url 'login' %}" class="btn btn-success">Ir a Iniciar Sesión</a>
+    </div>
+    {% endblock %}

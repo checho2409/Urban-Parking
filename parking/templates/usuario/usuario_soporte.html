@@ -1,0 +1,21 @@
+{% extends "soft/base222.html" %}
+
+{% block contenido %}
+<div class="user-header">
+    <h1>🆘 Soporte</h1>
+    <p>¿Tienes un problema o duda? Envíanos un mensaje.</p>
+</div>
+
+<div class="user-form">
+    <form method="post">
+        {% csrf_token %}
+        <label for="asunto">Asunto</label>
+        <input type="text" id="asunto" name="asunto" placeholder="Escribe el asunto de tu consulta">
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Detalla tu problema o pregunta"></textarea>
+
+        <button type="submit">📨 Enviar</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,137 @@
+/* Contenedor general */
+.pago-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+    color: white;
+}
+
+/* Card de registro */
+.pago-card {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    max-width: 100%;
+    width: 100%;
+}
+
+/* Títulos */
+.pago-card h2,
+.pago-history-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Inputs y selects */
+.pago-input,
+.pago-select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    margin-top: 10px;
+}
+
+.pago-input::placeholder {
+    color: #ddd;
+}
+
+.pago-input:focus,
+.pago-select:focus {
+    border: 1px solid #6a1b9a;
+    box-shadow: 0 0 6px rgba(106, 27, 154, 0.6);
+}
+
+/* Botones */
+.pago-btn {
+    background: #f49110e3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.pago-btn:hover {
+    background: #4a0072;
+}
+
+/* Tabla de pagos */
+.pago-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    color: white;
+}
+
+.pago-table th,
+.pago-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.pago-table th {
+    background: rgba(106, 27, 154, 0.6);
+    color: white;
+}
+
+.pago-table tr:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* Alertas */
+.pago-alert {
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.pago-alert.success {
+    background-color: rgba(67, 160, 71, 0.3);
+    border-left: 6px solid #43a047;
+}
+
+.pago-alert.error,
+.pago-alert.danger {
+    background-color: rgba(229, 57, 53, 0.3);
+    border-left: 6px solid #e53935;
+}
+
+.pago-alert.warning {
+    background-color: rgba(251, 192, 45, 0.3);
+    border-left: 6px solid #fb8c00;
+}
+
+.pago-alert.info {
+    background-color: rgba(30, 136, 229, 0.3);
+    border-left: 6px solid #1976d2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pago-input,
+    .pago-select,
+    .pago-btn {
+        width: 100%;
+    }
+}

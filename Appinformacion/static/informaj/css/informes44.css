@@ -1,0 +1,175 @@
+/* === GLOBAL === */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #0c2911 0%, #39A900 40%, #2a3e24 100%);
+    color: #333;
+}
+
+main {
+    flex-grow: 1;
+    padding: 40px 20px;
+}
+
+/* === NAVBAR === */
+.custom-navbar {
+    background-color: #ededed46 !important;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar .navbar-brand {
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar .nav-link {
+    color: white !important;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+/* === FOOTER === */
+.footer {
+    background-color: #ededed22;
+    color: white;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links li a:hover {
+    text-decoration: underline;
+}
+
+/* === CARD (contenedor de historial) === */
+.card {
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3);
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+}
+
+.card h2 {
+    color: #302b63;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+/* === TABLAS (Historial de Pagos) === */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border-radius: 12px;
+    overflow: hidden;
+    font-size: 14px;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.table thead {
+    background: linear-gradient(135deg, #764ba2, #302b63);
+    color: white;
+    text-align: center;
+}
+
+.table th,
+.table td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table tbody tr:hover {
+    background-color: #ece9f7;
+    transition: background 0.2s;
+}
+
+/* === ALERTAS (mensajes) === */
+.alert {
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.alert-success {
+    background-color: #e6ffed;
+    color: #1b5e20;
+    border-left: 6px solid #43a047;
+}
+
+.alert-danger,
+.alert-error {
+    background-color: #ffebee;
+    color: #b71c1c;
+    border-left: 6px solid #e53935;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border-left: 6px solid #fb8c00;
+}
+
+.alert-info {
+    background-color: #e3f2fd;
+    color: #0d47a1;
+    border-left: 6px solid #1976d2;
+}
+
+/* === BOTONES (actualizados al color pedido) === */
+.btn-primary {
+    width: 100%;
+    background: #f49110e3; /* 🔸 Naranja solicitado */
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+    height: 48px;
+    border: none;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: #c96e0b; /* 🔸 Tono más oscuro al pasar el mouse */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}

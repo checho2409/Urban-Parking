@@ -1,0 +1,26 @@
+{% extends "ingresos/base2.html" %}
+{% block title %}Registro de Usuario{% endblock %}
+
+{% block content %}
+<h2>Crear Cuenta</h2>
+
+{% if messages %}
+    {% for msg in messages %}
+        <p style="color:red">{{ msg }}</p>
+    {% endfor %}
+{% endif %}
+
+<form method="post">
+    {% csrf_token %}
+    <label>Usuario:</label>
+    <input type="text" name="username" required><br>
+
+    <label>Contraseña:</label>
+    <input type="password" name="password" required><br>
+
+    <label>Confirmar Contraseña:</label>
+    <input type="password" name="password2" required><br>
+
+    <button type="submit">Registrarse</button>
+</form>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "paginas/base.html" %}
+{% load static %}
+
+{% block titulo %}Urban Parking - Información{% endblock titulo %}
+
+{% block contenido %}
+<header>
+    <h1>🚘 Urban Parking</h1>
+    <p>Una solución inteligente para el control de acceso vehicular en ciudades modernas.</p>
+</header>
+
+<main class="contenedor">
+    <!-- Introducción -->
+    <section class="mensaje">
+        <h2>🔍 ¿Qué es Urban Parking?</h2>
+        <p><strong>Urban Parking</strong> es una plataforma web innovadora diseñada para optimizar el acceso vehicular en parqueaderos urbanos.</p>
+        <p>Facilita el registro de vehículos, el control de entradas/salidas y mejora la eficiencia operativa a través de una interfaz moderna y segura.</p>
+    </section>
+
+    <!-- Objetivo -->
+    <section class="mensaje">
+        <h2>🎯 Objetivo del Proyecto</h2>
+        <p>Digitalizar y modernizar la gestión de parqueaderos, eliminando procesos manuales, minimizando errores y ofreciendo una experiencia más ágil para conductores y administradores.</p>
+    </section>
+
+    <!-- Características -->
+    <section class="mensaje">
+        <h2>✨ Características principales</h2>
+        <ul>
+            <li>✅ Registro de vehículos con validación</li>
+            <li>✅ Historial detallado de accesos</li>
+            <li>✅ Interfaz responsive y fácil de usar</li>
+            <li>✅ Módulo administrativo con roles (opcional)</li>
+            <li>✅ Seguridad en el manejo de datos personales</li>
+        </ul>
+    </section>
+
+    <!-- Tecnologías -->
+    <section class="mensaje">
+        <h2>🛠️ Tecnologías utilizadas</h2>
+        <ul>
+            <li><strong>Frontend:</strong> HTML5, CSS3, animaciones, diseño adaptativo</li>
+            <li><strong>Backend:</strong> Django (Python)</li>
+            <li><strong>Base de datos:</strong> SQLite (modo desarrollo) / PostgreSQL (modo producción)</li>
+        </ul>
+    </section>
+
+    <!-- Autores -->
+    <section class="mensaje">
+        <h2>👥 Autores del Proyecto</h2>
+        <p>Este sistema fue desarrollado por un equipo de estudiantes y desarrolladores con el propósito de resolver un problema real en la gestión de parqueaderos urbanos.</p>
+        <p>El proyecto refleja una combinación de habilidades técnicas, creatividad y compromiso con la mejora urbana.</p>
+        <br>
+        <div style="text-align: center;">
+            <button class="boton">Contáctanos</button>
+        </div>
+    </section>
+</main>
+{% endblock contenido %}

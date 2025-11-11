@@ -1,0 +1,31 @@
+{% extends "soft/base222.html" %}
+
+{% block contenido %}
+<div class="user-header">
+    <h1>📜 Mi Historial</h1>
+    <p>Aquí puedes consultar todos tus registros previos.</p>
+</div>
+
+<table class="user-table">
+    <thead>
+        <tr>
+            <th>Fecha</th>
+            <th>Acción</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in historial %}
+        <tr>
+            <td>04/09/2025</td>
+            <td>Ingreso</td>
+            <td>Dentro</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="3">Ingresaste el dia 4/09/2025</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

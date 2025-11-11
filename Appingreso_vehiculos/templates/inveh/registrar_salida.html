@@ -1,0 +1,16 @@
+{% extends "soft/base222.html" %}
+{% block titulo %}Registrar Salida{% endblock titulo %}
+
+{% block contenido %}
+<div class="container mt-4">
+    <h2 class="mb-4">Registrar Salida del Vehículo</h2>
+    <div class="alert alert-info">
+        ¿Confirmas la salida del vehículo <b>{{ vehiculo.placa }}</b>?
+    </div>
+    <form method="POST" class="card p-4 shadow">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Confirmar Salida</button>
+        <a href="{% url 'lista_ingresos' %}" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+{% endblock contenido %}

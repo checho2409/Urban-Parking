@@ -1,0 +1,38 @@
+    [
+    {
+        "model": "Apppagos.usuario",
+        "pk": 1,
+        "fields": {
+        "nombre": "Carlos",
+        "apellidos": "Pérez",
+        "cedula": "100200300",
+        "correo": "carlos.perez@mail.com",
+        "celular": "3001234567",
+        "tipo": "externo"
+        }
+    },
+    {
+        "model": "Apppagos.usuario",
+        "pk": 2,
+        "fields": {
+        "nombre": "Laura",
+        "apellidos": "García",
+        "cedula": "400500600",
+        "correo": "laura.garcia@mail.com",
+        "celular": "3117654321",
+        "tipo": "externo"
+        }
+    },
+    {
+        "model": "Apppagos.usuario",
+        "pk": 3,
+        "fields": {
+        "nombre": "Juan",
+        "apellidos": "Torres",
+        "cedula": "700800900",
+        "correo": "juan.torres@mail.com",
+        "celular": "3209998888",
+        "tipo": "interno"
+        }
+    }
+    ]

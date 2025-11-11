@@ -1,0 +1,29 @@
+    {% extends "soft/base222.html" %}
+
+    {% block contenido %}
+    <div class="user-layout">
+
+    <main class="user-main">
+        <div class="user-header">
+        <h1>⚙️ Configuración</h1>
+        <p>Personaliza tu cuenta y preferencias.</p>
+        </div>
+
+        <form class="user-form">
+        <label>Idioma</label>
+        <select>
+            <option>Español</option>
+            <option>Inglés</option>
+        </select>
+
+        <label>Tema</label>
+        <select>
+            <option>Claro</option>
+            <option>Oscuro</option>
+        </select>
+
+        <button>Guardar</button>
+        </form>
+    </main>
+    </div>
+    {% endblock %}

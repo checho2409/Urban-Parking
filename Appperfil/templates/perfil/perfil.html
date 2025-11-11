@@ -1,0 +1,52 @@
+{% extends "inveh/base111.html" %}
+{% block titulo %}Mi Perfil{% endblock %}
+
+{% block contenido %}
+<div class="perfil-container">
+    <!-- Encabezado -->
+    <div class="perfil-header">
+        <div class="perfil-foto-container">
+            {% if perfil.foto %}
+                <img src="{{ perfil.foto.url }}" alt="Foto de perfil" class="perfil-foto">
+            {% else %}
+                <img src="https://via.placeholder.com/150" alt="Foto de perfil" class="perfil-foto">
+            {% endif %}
+        </div>
+        <div class="perfil-info">
+            <h2>{{ perfil.user.first_name }} {{ perfil.user.last_name }}</h2>
+            <p class="perfil-username">@{{ perfil.user.username }}</p>
+            <p class="perfil-email">{{ perfil.user.email }}</p>
+        </div>
+    </div>
+
+    <!-- Detalles -->
+    <div class="perfil-detalles">
+        <p><b>Teléfono:</b> {{ perfil.telefono|default:"No registrado" }}</p>
+        <p><b>Dirección:</b> {{ perfil.direccion|default:"No registrada" }}</p>
+    </div>
+
+    <!-- Bio breve -->
+    <div class="perfil-bio">
+        <h3>Sobre mí</h3>
+        <p>Soy un usuario activo de la plataforma, me gusta la innovación y el aprendizaje constante.</p>
+    </div>
+
+    <!-- Estadísticas -->
+    <div class="perfil-stats">
+        <div class="stat-card">
+            <h4>🚗 Vehículos</h4>
+            <p>5</p>
+        </div>
+        <div class="stat-card">
+            <h4>📅 Miembro desde</h4>
+            <p>{{ perfil.user.date_joined|date:"d/m/Y" }}</p>
+        </div>
+    </div>
+
+    <!-- Redes -->
+    <div class="perfil-social">
+        <a href="#" class="social-link">🌐 Web</a>
+        <a href="#" class="social-link">🐦 Twitter</a>
+    </div>
+</div>
+{% endblock %}

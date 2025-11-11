@@ -1,0 +1,64 @@
+{% extends "inveh/base111.html" %}
+{% block titulo %}Panel de Administrador{% endblock %}
+
+{% block contenido %}
+<div class="admin-dashboard">
+
+
+    <!-- Contenido principal -->
+    <main class="contenido-admin">
+        <div class="bienvenida">
+            <h1>{{ saludo }}, {{ usuario.username }} 👋</h1>
+            <p>Bienvenido al panel de control del administrador.</p>
+        </div>
+
+        <!-- Tarjetas rápidas -->
+        <div class="admin-grid">
+            <div class="admin-card">
+                <h2>👥 Usuarios Registrados</h2>
+                <p>Total: <strong>120</strong></p>
+            </div>
+            <div class="admin-card">
+                <h2>🚗 Vehículos</h2>
+                <p>Total: <strong>85</strong></p>
+            </div>
+            <div class="admin-card">
+                <h2>💰 Ingresos</h2>
+                <p>Hoy: <strong>$450.000</strong></p>
+            </div>
+        </div>
+
+        <!-- Gráfica -->
+        <div class="grafico-box">
+            <h2>📈 Estadísticas de ingresos</h2>
+            <canvas id="graficoIngresos"></canvas>
+        </div>
+    </main>
+</div>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const ctx = document.getElementById('graficoIngresos');
+new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'],
+        datasets: [{
+            label: 'Ingresos semanales',
+            data: [120, 190, 300, 250, 400, 320, 500],
+            borderWidth: 3,
+            borderColor: '#6a1b9a',
+            backgroundColor: 'rgba(106,27,154,0.2)',
+            fill: true,
+            tension: 0.3
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: { legend: { display: true, labels: { color: '#fff' } } },
+        scales: { x: { ticks: { color: '#fff' } }, y: { ticks: { color: '#fff' } } }
+    }
+});
+</script>
+{% endblock %}

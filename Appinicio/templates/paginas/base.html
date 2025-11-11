@@ -1,0 +1,88 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+<title>{% block titulo %}Urban Parking{% endblock titulo %}</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="{% static "inicioj/css/BARRA.css" %}">
+        <link rel="stylesheet" href="{% static "informaj/css/informes.css" %}">
+        <link rel="stylesheet" href="{% static "nosotrosj/css/nosotros.css" %}">
+    </head>
+
+    <body class="principio">
+        <header>
+<nav class="navbar navbar-expand-md navbar-dark custom-navbar">
+<a class="navbar-brand move-brand" href="#"><b>Urban Parking</b></a>
+    <button
+        class="navbar-toggler d-lg-none"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+    ></button>
+    <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavId">
+        <ul class="navbar-nav nav-links-custom">
+            <li class="nav-item">
+                <a class="nav-link active" href="{% url "inicio" %}">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url "informacion" %}">Información</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url "nosotros" %}">Nosotros</a>
+            </li>
+                        <li class="nav-item">
+                <a class="nav-link" href="{% url "login" %}">Ingresar</a>
+            </li>
+        </ul>
+    </div>
+</nav>    
+        </header>
+
+        <main>{% block contenido %}
+            {% endblock contenido %}
+        </main>
+        <br><br><br><br><br><br><br>
+<footer class="footer">
+    <section>
+<div class="container">
+    <div class="footer-content">
+    <p>&copy; 2025 Urban Parking. Todos los derechos reservados.</p>
+    <ul class="footer-links">
+        <li><a href="#">Política de Privacidad</a></li>
+        <li><a href="#">Términos y Condiciones</a></li>
+        <li><a href="#">Contacto</a></li>
+    </ul>
+    </div>
+</div>
+</section>
+</footer>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

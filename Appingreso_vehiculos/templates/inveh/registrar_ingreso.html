@@ -1,0 +1,12 @@
+{% extends "soft/base222.html" %}
+{% block contenido %}
+<div class="form-container">
+    <h2 class="form-title">Registrar Ingreso de Vehículo</h2>
+    <form method="post" class="form-box">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn-primary-custom">Guardar</button>
+        <a href="{% url 'lista' %}" class="btn-cancel">Cancelar</a>
+    </form>
+</div>
+{% endblock %}

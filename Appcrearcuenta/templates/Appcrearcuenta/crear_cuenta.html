@@ -1,0 +1,63 @@
+    {% extends "ingresos/base2.html" %}
+    {% load static %}
+
+    {% block titulo %}Crear Cuenta{% endblock %}
+
+    {% block contenido %}
+    <link rel="stylesheet" href="{% static 'css/crear_cuenta.css' %}">
+
+    <div class="formulario-cuenta">
+    <div class="caja-registro">
+        <h1>Crear una nueva cuenta</h1>
+    </div>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <!-- Usuario -->
+        <p>
+        <label for="id_username" class="etiqueta-cuenta">Nombre de usuario:</label>
+        <input type="text" name="username" maxlength="150" class="campo-cuenta" required id="id_username">
+        <span class="helptext">Requerido. 150 caracteres como máximo. Únicamente letras, dígitos y @/./+/-/_</span>
+        </p>
+
+        <!-- Email -->
+        <p>
+        <label for="id_email" class="etiqueta-cuenta">Email:</label>
+        <input type="email" name="email" class="campo-cuenta" required id="id_email">
+        </p>
+
+        <!-- Contraseña -->
+        <p class="campo-full">
+        <label for="id_password1" class="etiqueta-cuenta">Contraseña:</label>
+        <input type="password" name="password1" class="campo-cuenta" required id="id_password1">
+        <ul>
+            <li>Su contraseña no puede asemejarse tanto a su otra información personal.</li>
+            <li>Debe contener al menos 8 caracteres.</li>
+            <li>No puede ser una clave utilizada comúnmente.</li>
+            <li>No puede ser completamente numérica.</li>
+        </ul>
+        </p>
+
+        <!-- Confirmación de contraseña -->
+        <p class="campo-full">
+        <label for="id_password2" class="etiqueta-cuenta">Contraseña (confirmación):</label>
+        <input type="password" name="password2" class="campo-cuenta" required id="id_password2">
+        <span class="helptext">Para verificar, ingrese la misma contraseña anterior.</span>
+        </p>
+
+        <!-- Botón -->
+        <button type="submit" class="boton-cuenta boton-cuenta-primario">Crear cuenta</button>
+    </form>
+
+    {% if form.errors %}
+    <div class="lista-errores">
+        <ul>
+        {% for field, errors in form.errors.items %}
+            <li><strong>{{ field }}:</strong> {{ errors|join:", " }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+    </div>
+    {% endblock %}

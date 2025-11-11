@@ -1,0 +1,71 @@
+{% extends "soft/base222.html" %}
+{% load static %}
+{% block title %}Mis Vehículos{% endblock %}
+
+{% block contenido %}
+<div class="reg-container">
+    <h2 class="reg-title">Registrar Vehículo</h2>
+
+    {% if messages %}
+        {% for msg in messages %}
+            <p style="color:lightgreen; text-align:center;">{{ msg }}</p>
+        {% endfor %}
+    {% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="reg-grid">
+            <select name="tipoVehiculo" required>
+                <option value="" disabled selected>Seleccione tipo</option>
+                <option value="Moto">Moto</option>
+                <option value="Carro">Carro</option>
+                <option value="Cicla">Cicla</option>
+            </select>
+
+            <input type="text" name="marcaVehiculo" placeholder="Marca" required>
+            <input type="text" name="colorVehiculo" placeholder="Color" required>
+            <input type="text" name="modeloVehiculo" placeholder="Modelo" required>
+            <input type="text" name="placaVehiculo" placeholder="Placa "Opcional" required>
+        </div>
+
+        <div class="reg-center">
+            <button type="submit" class="reg-btn">Registrar</button>
+        </div>
+    </form>
+
+    <hr style="margin:30px 0; border: 1px solid rgba(255,255,255,0.2);">
+
+    <h2 class="reg-subtitle">Mis Vehículos</h2>
+
+    <table class="reg-table">
+        <thead>
+            <tr>
+                <th>Placa</th>
+                <th>Marca</th>
+                <th>Tipo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for v in vehiculos %}
+                <tr>
+                    <td>{{ v.placa }}</td>
+                    <td>{{ v.marca }}</td>
+                    <td>{{ v.tipo }}</td>
+                    <td>
+                        <a href="{% url 'eliminar_vehiculo' v.id %}" 
+                            class="reg-delete"
+                            onclick="return confirm('¿Estás seguro de eliminar este vehículo?');">
+                            Eliminar
+                        </a>
+                    </td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="4" class="reg-empty">No tienes vehículos registrados.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

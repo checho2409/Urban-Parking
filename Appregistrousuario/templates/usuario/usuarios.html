@@ -1,0 +1,65 @@
+    {% extends 'soft/base222.html' %}
+
+    {% block titulo %}Registro de Usuario{% endblock %}
+
+    {% block contenido %}
+    <main>
+    <div class="reg-container">
+        <h2 class="reg-title">Registrar Usuario</h2>
+
+        <!-- Formulario de registro -->
+        <form method="post">
+        {% csrf_token %}
+        <div class="reg-grid">
+            <p>{{ form.nombre.label_tag }} {{ form.nombre }}</p>
+            <p>{{ form.apellido.label_tag }} {{ form.apellido }}</p>
+            <p>{{ form.documento.label_tag }} {{ form.documento }}</p>
+            <p>{{ form.email.label_tag }} {{ form.email }}</p>
+            <p>{{ form.telefono.label_tag }} {{ form.telefono }}</p>
+            <p>{{ form.fecha_nacimiento.label_tag }} {{ form.fecha_nacimiento }}</p>
+            <p>{{ form.genero.label_tag }} {{ form.genero }}</p>
+            <p style="grid-column: span 2;">{{ form.direccion.label_tag }} {{ form.direccion }}</p>
+            <p>{{ form.placa.label_tag }} {{ form.placa }}</p>
+            <p style="grid-column: span 2;">{{ form.observaciones.label_tag }} {{ form.observaciones }}</p>
+        </div>
+
+        <div class="reg-center">
+            <button type="submit" class="reg-btn">Registrar</button>
+        </div>
+        </form>
+
+        <!-- Buscador -->
+        <h3 class="reg-subtitle">Usuarios Registrados</h3>
+        <form method="get" class="reg-search">
+        <input type="text" name="q" placeholder="Buscar por nombre o documento..." value="{{ query }}">
+        <button type="submit" class="reg-btn">Buscar</button>
+        </form>
+
+        <!-- Tabla de usuarios -->
+        {% if usuarios %}
+        <table class="reg-table">
+            <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Documento</th>
+                <th>Email</th>
+                <th>Teléfono</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for u in usuarios %}
+                <tr>
+                <td>{{ u.nombre }} {{ u.apellido }}</td>
+                <td>{{ u.documento }}</td>
+                <td>{{ u.email }}</td>
+                <td>{{ u.telefono }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p class="reg-empty">No hay usuarios registrados aún.</p>
+        {% endif %}
+    </div>
+    </main>
+    {% endblock %}
