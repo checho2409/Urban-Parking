@@ -89,8 +89,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'parqueadero',
-        'USER': 'root',
-        'PASSWORD': 'sena',
+        'USER': 'AliasJ.J',
+        'PASSWORD': 'Jjkss123456789#.',
         'HOST': 'localhost',
         'PORT': '3306',
     }
