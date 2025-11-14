@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0c2911 0%, #39A900 40%, #2a3e24 100%);
+    background: linear-gradient(135deg, #a3a2a2c9 0%, #d1d1d1a1 40%, #bebebeb2 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -21,10 +21,10 @@ form {
 
 /* Caja */
 .container {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(78, 236, 38, 0.753);
     padding: 35px;
     border-radius: 18px;
-    box-shadow: 0px 8px 20px rgba(0,0,0,0.45);
+    box-shadow: 0px 8px 20px rgb(66, 66, 66);
     color: white;
     backdrop-filter: blur(6px);
 }
@@ -41,7 +41,7 @@ form {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 25px;
-    color: #fff;
+    color: #ffffff;
 }
 
 /* Inputs */
@@ -51,21 +51,21 @@ input.form-control {
     border-radius: 10px;
     border: none;
     outline: none;
-    background: rgba(255,255,255,0.15);
-    color: white;
+    background: rgba(126, 126, 126, 0.76);
+    color: rgb(255, 255, 255);
     margin-top: 12px;
     font-size: 15px;
     transition: 0.3s ease;
 }
 
 input.form-control::placeholder {
-    color: #bbb;
+    color: #ffffff;
 }
 
 input.form-control:focus {
-    border: 1px solid #9c4dcc;
-    box-shadow: 0 0 10px rgba(156, 77, 204, 0.8);
-    background: rgba(255,255,255,0.25);
+    border: 1px solid #ffffff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.904);
 }
 
 /* Labels */
@@ -73,7 +73,7 @@ label {
     display: block;
     margin-top: 15px;
     font-size: 14px;
-    color: #fff;
+    color: #ffffff;
     text-align: left;
 }
 
@@ -91,13 +91,13 @@ label {
 }
 
 .btn-primary {
-    background: #f49110e3;
+    background: #6a1b9a;
     color: white;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 12px rgba(131, 131, 131, 0.973);
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, #8e24aa 0%, #6a1b9a 100%);
+    background: linear-gradient(135deg, #70008f 0%, #6a1b9a 100%);
     transform: translateY(-3px) scale(1.02);
     box-shadow: 0 6px 14px rgba(0,0,0,0.4);
 }
@@ -113,7 +113,7 @@ label {
 /* Checkbox toggle */
 .form-options .remember {
     font-size: 14px;
-    color: #fff;
+    color: #ffffff;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -135,13 +135,13 @@ label {
     height: 16px;
     width: 16px;
     background: transparent;
-    border: 2px solid #9c4dcc;
+    border: 2px solid #4f14bd;
     border-radius: 4px;
     transition: 0.3s;
 }
 
 .form-options .remember input:checked ~ .checkmark {
-    background: #9c4dcc;
+    background: #9531d3;
     border-color: #9c4dcc;
 }
 
@@ -157,7 +157,7 @@ label {
     top: 0px;
     width: 5px;
     height: 10px;
-    border: solid white;
+    border: solid rgb(255, 255, 255);
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
 }
@@ -165,13 +165,13 @@ label {
 /* Enlace olvidaste contraseña */
 .forgot-password {
     font-size: 13px;
-    color: #f49110e3;
+    color: #ffffffe3;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .forgot-password:hover {
-    color: #fff;
+    color: #ffffff;
     text-decoration: underline;
 }
 
@@ -181,11 +181,11 @@ label {
 
 /* --- Contenedor principal --- */
 .formulario-cuenta {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.986);
     padding: 40px;
     border-radius: 18px;
-    box-shadow: 0px 8px 20px rgba(0,0,0,0.45);
-    color: white;
+    box-shadow: 0px 8px 20px rgb(156, 155, 155);
+    color: rgb(255, 255, 255);
     backdrop-filter: blur(6px);
     max-width: 700px; /* más ancho para columnas */
     margin: auto;
@@ -202,7 +202,7 @@ label {
     font-size: 2.2rem;
     font-weight: bold;
     margin-bottom: 30px;
-    color: #fff;
+    color: #ffffff;
 }
 
 /* --- Grid del formulario --- */
@@ -224,7 +224,7 @@ label {
     display: block;
     font-size: 15px;
     font-weight: 500;
-    color: #fff;
+    color: #fffcfc;
     margin-bottom: 6px;
 }
 
@@ -251,7 +251,7 @@ input.campo-cuenta::placeholder,
 
 input.campo-cuenta:focus,
 .formulario-cuenta input:focus {
-    border: 1px solid #9c4dcc;
+    border: 1px solid #8f1cd6;
     box-shadow: 0 0 10px rgba(156, 77, 204, 0.8);
     background: rgba(255,255,255,0.25);
 }
@@ -271,7 +271,7 @@ input.campo-cuenta:focus,
 }
 
 .boton-cuenta-primario {
-    background: linear-gradient(135deg, #6a1b9a 0%, #8e24aa 100%);
+    background: linear-gradient(135deg, #5614ad 0%, #8e24aa 100%);
     color: white;
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
@@ -289,7 +289,7 @@ input.campo-cuenta:focus,
     padding: 12px;
     border-radius: 8px;
     background: rgba(255, 0, 0, 0.15);
-    border-left: 4px solid #ff4d4d;
+    border-left: 4px solid #ffffff;
     text-align: left;
     font-size: 14px;
     color: #ffb3b3;
