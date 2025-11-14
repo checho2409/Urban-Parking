@@ -9,7 +9,7 @@
 /* ======== SIDEBAR ======== */
 .usuario-sidebar {
     width: 250px;
-    background: linear-gradient(180deg, #1b5e20, #2e7d32, #43a047);
+    background: linear-gradient(180deg, #ff0000, #00ff0d, #002fff);
     padding: 30px 20px;
     color: white;
     display: flex;
